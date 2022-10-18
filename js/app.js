@@ -15,7 +15,7 @@ const productData = [
 		index: '03',
 		name: 'chilling mood',
 		image: 'img3.jpg',
-		des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem, obcaecati neque culpa dicta temporibus.'
+		des: ' Cumque exercitationem, obcaecati neque culpa dicta temporibus.'
 	}
 ]
 
@@ -27,9 +27,9 @@ let smProductDes = document.querySelector('.sm-product-des')
 
 let productImgContainer = document.querySelector('.product-img-container')
 let productImg = document.querySelector('.product-img')
-let backDropImg = document.querySelector('.backdrop-img')
+let backdropImg = document.querySelector('.backdrop-img')
 
-let productDetail = document.querySelector('product-detail')
+let productDetail = document.querySelector('.product-detail')
 let productName = document.querySelector('.product-name')
 let productDes = document.querySelector('.product-des')
 
@@ -43,4 +43,29 @@ nxtBtn.addEventListener('click', () => {
  }
  productIndex.innerHTML = productData[currentProduct].index
  smProductDes.innerHTML = productData[currentProduct].des.slice(0,80)
+ 	
+ smImgContainer.classList.add('slide')
+ productImgContainer.classList.add('slide')
+ backdropImg.classList.add('fade')
+ productDetail.classList.add('fade')
+
+ setTimeout(() =>{
+	//EJECUTA DESPUES DE 500MS, CAMBIA TEXT
+	productName.innerHTML = productData[currentProduct].name
+	productDes.innerHTML = productData[currentProduct].des
+	smImg.src = productImg.src = backdropImg.src = 
+	`
+		img/${productData[currentProduct].image}
+	`
+ },500)
+
+ setTimeout(() => {
+	smImgContainer.classList.remove('slide')
+	productImgContainer.classList.remove('slide')
+	backdropImg.classList.remove('fade')
+	productDetail.classList.remove('fade')
+ },2000)
+
 })
+
+
