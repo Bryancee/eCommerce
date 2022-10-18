@@ -7,9 +7,9 @@ const productData = [
 	},
 	{
 		index: '02',
-		name: 'designer outfil',
+		name: 'designer outfit',
 		image: 'img2.jpg',
-		des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque exercitationem, obcaecati neque culpa dicta temporibus.'
+		des: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae quis modi at'
 	},
 	{
 		index: '03',
